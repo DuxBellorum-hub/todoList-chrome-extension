@@ -1,0 +1,185 @@
+@font-face {
+  font-family: cabinSketch;
+  src: url(ressources/fonts/CabinSketch-Regular.ttf);
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  background-color: #fef6e4 !important;
+  font-family: sans-serif;
+}
+
+.todo-list {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 600px;
+  background-color: #f3d2c1;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h3, h2, h1 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #001858;
+  font-family: cabinSketch, sans-serif;
+}
+
+h6 {
+  font-family: cabinSketch, sans-serif;
+  
+}
+
+div #addItem {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 15px;
+  margin-right: 1rem;
+}
+
+.addButton {
+
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+label {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #172c66;
+  font-family: cabinSketch, sans-serif;
+}
+
+.delete {
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+}
+
+div .hidden {
+  display: none;
+  font-style: italic;
+}
+
+
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.15;
+    position: relative
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 10.3px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  transition: all 0.15s ease-out 0s;
+  background: #fef6e4;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000
+}
+
+.option-input:hover {
+  background: #001858
+}
+
+.option-input:checked {
+  background: #f582ae
+}
+
+.option-input:checked::before {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  content: "\f111";
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-size: 16.7px;
+  text-align: center;
+  line-height: 30px
+}
+
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.25s;
+  -moz-animation: click-wave 0.25s;
+  animation: click-wave 0.25s;
+  background: #f582ae;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100
+}
+
+.option-input.radio {
+  border-radius: 50%
+}
+
+.option-input.radio::after {
+  border-radius: 50%
+}
+
+.completed {
+  color: #001858;
+  text-decoration: line-through
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ressources/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="ressources/vendors/fontawesome.css">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+    <title>TodoList</title>
+</head>
+
+<body>
+    <div class="todo-list">
+        <h3 class="text-center"> Todo-List</h3>
+        <div id="addItem">
+            <input type="text" class="todoInput" placeholder="Add new task..">
+            <button class="addButton btn btn-outline-success">Add</button>
+        </div>
+        <ul id="taskList">
+        </ul>
+        <div class="hidden">
+            <hr>
+            <h6 class="text-center">Your todo-list is empty ...</h6>
+        </div>
+    </div>
+
+
+    <script src="ressources/vendors/jquery.min.js"></script>
+    <script src="ressources/vendors/bootstrap.min.js"></script>
+    <script src="./popup.js"></script>
+
+</body>
+
+</html>
